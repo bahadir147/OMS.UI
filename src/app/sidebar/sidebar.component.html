@@ -1,0 +1,12 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item" *ngFor="let menuItem of menuItems">
+        <a class="nav-link" [routerLink]="[menuItem.path]" routerLinkActive #rla="routerLinkActive" [ngClass]="rla.isActive? (menuItem.children === null? 'active' : '') : ''"
+          [routerLinkActiveOptions]="{exact: true}">
+          {{menuItem.title}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

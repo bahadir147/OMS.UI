@@ -1,0 +1,11 @@
+<dx-data-grid id="gridContainer" [dataSource]="customers">
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[5, 10, 20]" [showInfo]="true">
+    </dxo-pager>
+
+    <dxi-column dataField="CompanyName" sortOrder="asc"></dxi-column>
+    <dxi-column dataField="City" sortOrder="asc"></dxi-column>
+    <dxi-column dataField="State" sortOrder="asc"></dxi-column>
+    <dxi-column dataField="Phone" sortOrder="asc"></dxi-column>
+    <dxi-column dataField="Fax" sortOrder="asc"></dxi-column>
+</dx-data-grid>
